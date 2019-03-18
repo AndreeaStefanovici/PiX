@@ -1,106 +1,171 @@
-
-html{
-background:black;
-}
-body{
-	background:white;
-font-family:sans-serif;
-line-height:25px; /*spatiul intre linii*/
-}
-header{
-text-align:center;
-background:url(imagini/background.jpg);
-background-size:cover;
-background-position: 0% 60%;
-color:white;
-}
-.space{
-height:300px;
-} /*spatiul dintre imaginea de fundal si meniu*/
-ul{
-padding:10px;
-background:rgba(0,0,0,0.5);
-}
-li{
-display:inline; /*meniul orizontal*/
-padding-top:0px;
-padding-right: 30px;
-padding-bottom: 0px; 
-padding-left: 30px;
-}
-a{ 
-color:white; 
-text-decoration:none;
-}
-a:hover{
-color:#afafaf;
-}
-article{
-text-align:center;
-background:white;
-background-size:cover;
-background-position: 0% 60%;
-}
-h2{
-font-size:2.5em;
-}
-footer{
-background:black;
-color:white;
-text-align:center;
-padding:10px;
+html {
+    background: black;
 }
 
-/*Dropdown Button */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: white;
+    line-height: 25px;
+}
+
+header {
+    text-align: center;
+    background: url(imagini/background.jpg);
+    background-size: cover;
+    background-position: 0% 0%;
+    color: white;
+}
+
 .dropbtn {
-	background:rgba(0,0,0,0);
-	color: white;
-	padding: 16px;
-	border: none;
-	font-size: 16px;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
 }
 
-/*The container <div> - needed to position the dropdown content */
-.dropdown {
-	position: relative;
-	display: inline;
-}
-
-/* Dropdown Content (Hidden by Default) */
 .dropdown-content {
     display: none;
     position: absolute;
-    background:rgba(0,0,0,0.5);
-    min-width: 160px;
+    background-color: #f1f1f1;
+    min-width: 100px;
+    overflow: auto;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 6px;
+
 }
 
-/* Links inside the dropdown */
+.show {
+    display: block;
+}
+
+.space {
+    height: 300px;
+}
+
+.clearfix {
+    padding: 10px;
+    text-decoration: none;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.clearfix li {
+    display: inline;
+    padding-top: 0px;
+    padding-right: 30px;
+    padding-bottom: 0px;
+    padding-left: 30px;
+}
+
+.clearfix li a {
+    text-decoration: none;
+    color: white;
+}
+
+.clearfix li a:hover {
+    color: #afafaf;
+}
+
+article {
+    text-align: center;
+    background: white;
+    background-size: cover;
+    background-position: 0% 60%;
+}
+
+h2 {
+    font-size: 2.5em;
+}
+
+footer {
+    background: black;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+.dropbtn {
+    background-color: black;
+    border: none;
+    color: white;
+    padding: 10px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 6px;
+    margin: 1.5px;
+}
+
+.dropdown-content a:hover {
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .dropbtn {
+    background: rgba(0, 0, 0, 0.5);
+
+}
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
 .dropdown-content a {
+    background-color: black;
     color: white;
     padding: 12px 16px;
     text-decoration: none;
     display: block;
 }
 
-/* Change color of dropdown links on hover */
-.dropdown-content a:hover {
-	background:rgba(0,0,0,0.5);
+.dropup {
+    position: relative;
+    display: inline-block;
 }
 
-/* Show the dropdown menu on hover */
-.dropdown:hover .dropdown-content {
+.dropup-content {
+    
+    display: none;
+    position: absolute;
+    bottom: 50px;
+    background-color: #f1f1f1;
+    min-width: 100px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+  
+   
+}
+
+.dropup-content a {
+    background-color: #000;
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    border-radius: 6px;
+}
+
+.dropup-content a:hover {
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.dropup:hover .dropup-content {
     display: block;
 }
 
-/* Change the background color of the dropdown button when the dropdown content is shown */
-.dropdown:hover .dropbtn {
-	background:rgba(0,0,0,0.5);
-	
+.dropup:hover .dropbtn {
+    background-color: black;
+    color: white;
 }
 
-body {font-family: Arial, Helvetica, sans-serif;}
-
-input[type=text], input[type=password] {
+input[type=text],
+input[type=password] {
     width: 50%;
     padding: 12px 20px;
     margin: 8px 0;
@@ -109,60 +174,52 @@ input[type=text], input[type=password] {
     box-sizing: border-box;
 }
 
-
- .login{
+.login {
     background-color: white;
     color: white;
     padding: 4px 2px;
-    margin-right: 10px ;
-	margin-bottom: 10px;
-	margin-left: 10px;
-	margin-top: 10px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    margin-top: 10px;
     border: none;
     cursor: pointer;
     width: 10%;
-	text-align: center;
+    text-align: center;
 }
 
-.register{
-	background-color:  #008CBA;
+.register {
+    background-color: #008CBA;
     color: white;
     padding: 14px 20px;
-    margin-right: 80px ;
+    margin-right: 80px;
     border: none;
     cursor: pointer;
     width: 50%;
-	text-align: center;
+    text-align: center;
 }
-.submit{
-	background-color:  #008CBA;
+
+.submit {
+    background-color: #008CBA;
     color: white;
     padding: 14px 20px;
-    margin-right: 80px ;
+    margin-right: 80px;
     border: none;
     cursor: pointer;
     width: 50%;
-	text-align: center;
+    text-align: center;
 }
-
-
-
-button:hover {
-    opacity: 0.8;
-}
-
 
 .cancelbtn {
     width: auto;
     padding: 10px 18px;
     background-color: #e60000;
-	cursor:pointer;
-	color: white;
+    cursor: pointer;
+    color: white;
 }
 
-
 .imgcontainer {
-    text-align: left ;
+    text-align: left;
     margin: 24px 0 12px 0;
     position: relative;
 }
@@ -182,30 +239,27 @@ span.psw {
     padding-top: 16px;
 }
 
-
 .modal {
     margin-bottom: 80%;
-    display: none; 
+    display: none;
     position: fixed;
     z-index: 1;
     left: 0;
     top: 0;
     width: 100%;
-    height: 100%; 
-    overflow: auto; 
-    background-color: grey; 
-    background-color: rgba(0,0,0,0.4); 
+    height: 100%;
+    overflow: auto;
+    background-color: grey;
+    background-color: rgba(0, 0, 0, 0.4);
     padding-top: 60px;
 }
 
-
 .modal-content {
     background-color: #fefefe;
-    margin: 5% auto 15% auto; 
+    margin: 5% auto 15% auto;
     border: 1px solid #888;
-    width: 50%; 
+    width: 50%;
 }
-
 
 .close {
     position: absolute;
@@ -222,32 +276,30 @@ span.psw {
     cursor: pointer;
 }
 
-a{ 
-color:white; 
-text-decoration:none;
+.forgotPass {
+    color: black;
+    text-decoration: none;
 }
 
-.forgotPass{
-color:black; 
-text-decoration:none;
-}
 @media only screen and (max-width: 1100px) {
+
     /* For desktop: */
-    .sidebar_container
-{ float: left;
-  margin: 10px 20px 0 0;
-  
-  width: 100%;
-  padding: 0;
-  
-  }
-  
-.search input[type=text] {
-  float: right;
-  padding: 6px;
-  margin-top: 8px;
-  margin-right: 16px;
-  border: none;
-  font-size: 17px;
+    .sidebar_container {
+        float: left;
+        margin: 10px 20px 0 0;
+
+        width: 100%;
+        padding: 0;
+
+    }
 }
- 
+
+.search input[type=text] {
+    float: center;
+    padding: 6px;
+    margin-top: 8px;
+    margin-right: 16px;
+    border: none;
+    font-size: 17px;
+}
+
