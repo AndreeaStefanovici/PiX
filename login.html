@@ -1,11 +1,13 @@
 
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-
-<title>PiX-Login</title>
-<link rel="icon" href="imagini/logo.jpg">
-<link rel="stylesheet" type="text/css" href="style.css"> 
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>PiX-Login</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="icon" href="imagini/logo.jpg" style="width:100%;">
+	<link rel="stylesheet" type="text/css" href="login_css.css"> 
 
 </head>
 <body>
@@ -14,60 +16,56 @@
 
 <div class="space"></div>
 
-<ul>
-
-<div class="dropdown">
-	<button class="dropbtn">Login here<span class="arrow">&#9660;</span></button>	
-</div>
-
-</ul>
+		
+           <div class="dropdown">
+	       <button class="dropbtn">Login here<span class="arrow">&#9660;</span></button>	
+		   </div>
+        
 </header>
 
-<article>
 
-<div class="container">
 
-<button class="button login" onclick="document.getElementById('loginClick').style.display='block'" style="width:auto;"><img src="imagini/login.jpg" alt="Login" class="image"></button>
-</div>
-</article>
+ <div class = "body_wrapper">
+        <div class = "little_icon_container">
+            <div class = "little_icon">
+                <img class = "icon" src="imagini/LoginRed.jpg" alt="logo">
+            </div>
+        </div>
 
-<div id="loginClick" class="modal">
-  <div class="modal-content animate">
-  <form  action="/action_page.php">
-    <div class="imgcontainer">
-      <span onclick="document.getElementById('loginClick').style.display='none'" class="close" title="Close Modal">&times;</span>
-      <img src="imagini/LoginRed.jpg" alt="Avatar" class="avatar">
+        <div class = "form_wrapper">
+            <div class = "username_and_input">
+                <div class = "username">
+                    Username
+                </div>
+                <input class = "input_fields" type = "text" placeholder="  Username">
+            </div>
+
+            <div class = "password_and_input">
+                <div class = "password">
+                    Password
+                </div>
+                <input class = "input_fields" type = "text" placeholder="  Password">
+            </div>
+        </div>
+
+        <div class = "submit_buttons">
+		<form  action="home.html">
+            <button class = "buttons" id = "login" >Log in</button>
+            <label class = "checkbox">
+                <input type="checkbox" checked="checked" name="remember"> Remember me
+            </label>
+			</form>
+			<form  action="register.html">
+            <button class = "buttons" id = "register" >Register</button>
+			</form>
+
+        </div>
+
+        <div class = "cancel_container">
+            
+            <a href="login.html" class = "forgot_password">Forgot password? </a>
+        </div>
     </div>
-	</form>
-	<div id="login">
-
-				
-    <div class="container">
-      <label for="uname"><b>Username</b></label>
-      <input type="text" placeholder="Enter Username" name="uname" required>
-		<p> </p>
-
-      <label for="psw"><b>Password</b></label>
-      <input type="password" placeholder="Enter Password" name="psw" required>
-						
-      <button class="button submit" type="submit">Login</button> 
-      <label>
-	  <p> </p>
-        <input type="checkbox" checked="checked" name="remember"> Remember me
-      </label>
-	  
-	  <p> </p>
-	  	<form  action="register.html">
-	  <button class="button register" type="submit"> Register here </button></a>
-    </div>
-		</form>
-			</div>
-
-    <div class="container" style="background-color:#f1f1f1">
-      <button type="button" onclick="document.getElementById('loginClick').style.display='none'" class="cancelbtn">Cancel</button>
-      <span class="psw"><a class="a forgotPass" href="#" >Forgot password?</a></span>
-    </div>
-  </div>
-</div>
 </body>
+
 </html>
