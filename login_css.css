@@ -1,0 +1,165 @@
+html {
+    background-image: url(imagini/background.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+body{
+    margin-bottom:20px;
+}
+
+header {
+    text-align: center;   
+    color: white;
+}
+
+   
+
+.dropbtn {
+    background-color: white;
+    border: none;
+    color: black;
+    padding: 10px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 6px;
+    margin: 1.5px;
+}
+
+.space {
+    height: 150px;
+}
+/*
+size de pop-up window
+*/
+
+.body_wrapper{
+    width: 50%;
+    margin-left: 25%;
+    margin-right: 25%;
+    background-color: white;
+}
+
+/*
+Containers design
+*/
+
+.little_icon_container{
+    height: fit-content;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    margin-left: 15px;
+}
+
+.icon{
+    width:100px;
+    margin-top: 15px;
+}
+
+
+.username, .password, .input_fields{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: large;
+    margin-bottom: 15px;
+    width: fit-content;
+    display: inline-block;
+}
+
+.input_fields{
+    width:40% !important;
+}
+.username, .password{
+    margin-right:20px;
+    width: 20%;
+}
+
+.form_wrapper{
+    padding:15px;
+}
+
+/*
+Buttons design
+*/
+
+.buttons{
+    margin-left: 15%;
+    width: 50%;
+    margin-bottom: 15px;
+	
+}
+
+button.buttons {
+    color: white;
+    background: black;
+    border: 1px black;
+    box-shadow: inset 0 1px 0 #80B0FB;
+}
+
+button.buttons:hover {
+    border: 1px rgb(29, 28, 28) solid;
+    box-shadow: 0 1px 1px #EAEAEA, inset 0 1px 0 black;
+    background: rgb(29, 28, 28);
+}
+
+button.buttons:active {
+    box-shadow: inset 0 2px 5px #2370FE;   
+}
+
+/*
+Cancel Container
+*/
+
+.cancel_container{
+    margin-left : 15px;
+    margin-right:15px;
+    padding-bottom: 25px;
+	  
+}
+
+
+.forgot_password{
+    width:fit-content;
+    display: inline-block;
+    float:right;
+}
+
+
+
+button{
+    border-radius:10%;
+	padding: 5px 15px;
+}
+
+
+
+@media (max-width: 850px){
+    .checkbox{
+        display:block;
+        margin-left:10%;
+        margin-bottom:15px;
+    }
+}
+
+@media (max-width: 700px){
+    .input_fields{
+        display:block;
+        width:90% !important;
+    }
+	.icon{
+		width:70%;
+	}
+}
+
+@media (max-width: 500px){
+    .forgot_password{
+        float:left;
+        padding-top: 10px;
+    }
+
+    .body_wrapper{
+        padding-bottom:20px;
+    }
+}
+
