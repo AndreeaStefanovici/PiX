@@ -1,11 +1,13 @@
 
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-
-<title>PiX-Register</title>
-<link rel="icon" href="imagini/logo.jpg">
-<link rel="stylesheet" type="text/css" href="style.css"> 
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>PiX-Register</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="icon" href="imagini/logo.jpg" style="width:100%;">
+	<link rel="stylesheet" type="text/css" href="register_css.css"> 
 
 </head>
 <body>
@@ -14,55 +16,60 @@
 
 <div class="space"></div>
 
-<ul>
-
 <div class="dropdown">
 	<button class="dropbtn">Register here<span class="arrow">&#9660;</span></button>	
 </div>
-
-</ul>
 </header>
 
-<article>
 
-<div class="container">
+<div class = "body_wrapper">
+        <div class = "little_icon_container">
+            <div class = "little_icon">
+                <img class = "icon" src="imagini/register.jpg" alt="logo" >
+            </div>
+        </div>
 
-<button class="button login" onclick="document.getElementById('registerClick').style.display='block'" style="width:auto;"><img src="imagini/register.jpg" alt="Login" class="image"></button>
-</div>
-</article>
+        <div class = "form_wrapper">
+            <div class = "username_and_input">
+                <div class = "username">
+                    Username
+                </div>
+                <input class = "input_fields" type = "text" placeholder="  Username">
+            </div>
+			
+			<div class = "email_and_input">
+                <div class = "email">
+                    Email
+                </div>
+                <input class = "input_fields" type = "text" placeholder="  Email">
+            </div>
 
-<div id="registerClick" class="modal">
-  <div class="modal-content animate">
-  <form  action="/action_page.php">
-    <div class="imgcontainer">
-      <span onclick="document.getElementById('registerClick').style.display='none'" class="close" title="Close Modal">&times;</span>
-      <img src="imagini/LoginRed.jpg" alt="Avatar" class="avatar">
-    </div>
-	</form>
-	<div id="login">
-				
-    <div class="container">
-      <label for="uname"><b>Username        </b></label>
-      <input type="text" placeholder="Enter Username" name="uname" required>
-		<p> </p>
-		  <label for="email"><b>Email            </b></label>
-      <input type="text" placeholder="Enter Email" name="email" required>
-	  <p> </p>
-      <label for="psw"><b>Password        </b></label>
-      <input type="password" placeholder="Enter Password" name="psw" required>
-	  <p> </p>
-	  <label for="cpsw"><b>Confirm Password</b></label>
-      <input type="password" placeholder="Enter Password Again" name="cpsw" required>
-	  
-	  <p> </p>
-	  <button class="button register" type="submit" onclick="register.html"> Register here </button></a>
-    </div>
-			</div>
+            <div class = "password_and_input">
+                <div class = "password">
+                    Password
+                </div>
+                <input class = "input_fields" type = "text" placeholder="  Password">
+            </div>
+			
+			<div class = "password_and_input">
+                <div class = "password">
+                    Confirm Password
+                </div>
+                <input class = "input_fields" type = "text" placeholder="  Enter Password Again">
+            </div>
+        </div>
 
-    <div class="container" style="background-color:#f1f1f1">
-      <button type="button" onclick="document.getElementById('registerClick').style.display='none'" class="cancelbtn">Cancel</button>
-    </div>
-  </div>
-</div>
+        <div class = "submit_buttons">
+			<form  action="login.html">
+            <button class = "buttons" id = "register" >Register</button>
+			</form>
+
+        </div>
+
+       
+        </div>
+    
+
+
 </body>
 </html>
