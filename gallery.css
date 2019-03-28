@@ -1,0 +1,54 @@
+html {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background: black;   
+}
+
+body {
+    background: white;
+    line-height: 25px;
+}
+
+header {
+    text-align: center;
+    background: url(imagini/background.jpg);
+    background-size: cover;
+    background-position: 0% 0%;
+    color: white;
+}
+
+.space {
+    height: 200px;
+}
+/*bara meniu*/
+
+.clearfix {
+    
+    background-color: rgba(0, 0, 0, 0.5);
+    margin: 0;
+    padding: 10px;
+    overflow: hidden;
+
+
+}
+
+.clearfix li {
+    display: inline;
+    padding-top: 0px;
+    padding-right: 30px;
+    padding-bottom: 0px;
+    padding-left: 30px;
+	float: right;
+}
+
+.clearfix li a {
+    float:right;
+    text-decoration: none;
+    color: white;
+}
+
+.clearfix li a:hover {
+    color: #afafaf;
+}
+
+
+
