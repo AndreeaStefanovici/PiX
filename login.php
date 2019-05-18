@@ -1,4 +1,4 @@
-<?php include('server.php') ?>
+<?php include('server.php'); ?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -25,6 +25,7 @@
 </header>
 
 <form method="post" action="login.php">
+  	
 
 	<div class = "body_wrapper">
         <div class = "little_icon_container">
@@ -48,27 +49,31 @@
                 <input class = "input_fields" type="password" name="password">
             </div>
         </div>
-        <?php include('errors.php'); ?>
+		
+		<div>
+		<?php include('errors.php'); ?>
+        </div>
+
         <div class = "submit_buttons">
 		
-            <button class = "buttons" id = "login" type="submit"  name="login_user" >Login</button>
+            <button class = "buttons" id = "login" type="submit"  name="login_user" >Log in</button>
            
 		</div>
-        </form> 
-        <form action="register.php">
-		<div class = "submit_buttons">
-			
-            <button class = "buttons" id = "register" >Register</button>
+		</form>
 		
-
-        </div>
-</form>
+		
+		<div class = "submit_buttons">
+		<form  action="register.php">
+            <button class = "buttons" id = "register" >Register</button>
+			</form>
+	    </div>		
+		
         <div class = "cancel_container">
             
             <a href="login.html" class = "forgot_password">Forgot password? </a>
         </div>
    </div>
- 
+  
  
 </body>
 

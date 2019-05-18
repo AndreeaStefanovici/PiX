@@ -61,7 +61,10 @@
                 <input class = "input_fields" type="password" name="password_2">
             </div>
         </div>
-        <?php include('errors.php'); ?>
+		<div>
+		<?php include('errors.php'); ?>
+		</div>
+
         <div class = "submit_buttons">
 			
             <button class = "buttons" id = "register"  type="submit"  name="reg_user">Register</button>

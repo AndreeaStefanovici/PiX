@@ -1,5 +1,5 @@
 <?php 
-  session_start(); 
+  include('server.php'); 
 
   if (!isset($_SESSION['username'])) {
   	$_SESSION['msg'] = "You must log in first";
@@ -36,12 +36,13 @@
 
 		<ul class="clearfix">
 		    
+			
 			<?php  if (isset($_SESSION['username'])) : ?>
-    	<li><a href="index.php?logout='1'"> Logout </a><br></li>
-      <?php endif ?>
-			<li><a href="upload.html"> Upload</a><br></li>
+    	        <li> <a href="index.php?logout='1'" >Logout</a> </li>
+			<?php endif ?>
+			<li><a href="upload.php"> Upload</a><br></li>
 			<li><a href="index.php"> Home</a><br></li>
-			<li><a href="gallery.html"> Gallery</a><br></li>
+			<li><a href="gallery.php"> Gallery</a><br></li>
 		</ul>
 		
 
@@ -59,6 +60,20 @@
 			</div>
 			<input type="text" placeholder="Search...">
 		</div>
+		
+		<?php
+			$photoId = isset($_REQUEST['photoId']) ? $_REQUEST['photoId'] : null;
+			echo $photoId;
+			$usr = $_SESSION['username'];
+			$result = mysqli_query($db, "SELECT image, image_text , image_title , image_tags FROM images join users on images.galleryID = users.userID where username='$usr' and images.id='$photoId'");
+			$row = mysqli_fetch_array($result);
+			echo"<img src='imagini_upload/".$row['image']."'class='image'>";
+			echo'<p>';
+				echo '<div class="desc">'.$row['image_text']."</div>";
+				echo '<div class="desc">'.$row['image_title']."</div>";
+				echo '<div class="desc">'.$row['image_tags']."</div>";
+		echo'</p>';
+		?>
 
 		<div>
 			<img src="imagini/EmpireState.jpg" alt="state" class="image">
@@ -68,7 +83,7 @@
 			dintre cele mai mari zone urbane din lume.</p>
 		<div class="buttons">
 			<button class="dropbtn"> Download </button>
-			<button class="dropbtn"> Delete </button>
+			<input class="dropbtn" type="button" name="delete" value="Delete">
 			<div class="dropup">
 				<button class="dropbtn">Edit photo</button>
 				<div class="dropup-content">
