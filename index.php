@@ -1,4 +1,4 @@
-<?php 
+<?php
   include('server.php'); 
 
   if (!isset($_SESSION['username'])) {
@@ -10,7 +10,7 @@
   	unset($_SESSION['username']);
   	header("location: login.php");
   }
-?>
+?> 
 
 <!DOCTYPE html>
 <html lang="en">
@@ -48,19 +48,36 @@
 
 	</header>
 	<article>
-		<h1>Welcome!</h1>
 		<div class="search">
-			<div class="dropdown">
-				<button class="dropbtn">Filter</button>
-				<div class="dropdown-content">
-					<a href="photoes.html">Title</a>
-					<a href="photoes.html">Tag</a>
-					<a href="photoes.html">Keyword</a>
-				</div>
+			<p>Filter</p>
+			<div class="dropbtn">
+				<select class="select" style="color:white; background-color:black; width: 150px; height: 50px;border:black;">
+					<option>Dog</option>
+					<option>Travel</option>
+					<option>Food</option>
+					<option>City</option>
+					<option>#love</option>
+					<option>#sweet</option>
+					<option>#food</option>
+					<option>#dog</option>
+					<option>#red</option>
+					<option>#black</option>
+					<option>#blue</option>
+					<option>#white</option>
+					<option>#samoyed</option>
+					<option>#chowchow</option>
+					<option>#puppy</option>
+					<option>#fluffly</option>
+					<option>#NewYork</option>
+					<option>#vacation</option>
+					<option>#surprise</option>
+					<option>#pancakes</option>
+					<option>#strawberries</option>
+					<option>#gold</option>
+				</select>
 			</div>
 			<input type="text" placeholder="Search...">
 		</div>
-		
 		<?php
 			$photoId = isset($_REQUEST['photoId']) ? $_REQUEST['photoId'] : null;
 			echo $photoId;
@@ -73,7 +90,7 @@
 				echo '<div class="desc">'.$row['image_title']."</div>";
 				echo '<div class="desc">'.$row['image_tags']."</div>";
 		echo'</p>';
-		?>
+		?> 
 
 		<div>
 			<img src="imagini/EmpireState.jpg" alt="state" class="image">
