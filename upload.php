@@ -11,7 +11,15 @@ if(isset($_SESSION['username']))
   $msg = "";
   // If upload button is clicked ...
   if (isset($_POST['upload'])) {
-
+	
+	$allowed =  array('jpeg','png' ,'jpg');
+	$filename = $_FILES['image']['name'][0];
+	$ext = pathinfo($filename, PATHINFO_EXTENSION);
+	if(!in_array($ext, $allowed) ) {
+		array_push($errors, "File extension is not allowed!");
+		echo"NUUUUU";
+	}
+	else{
 	$imagesCount = count($_FILES['image']['name']);
   	
   	// Get text
@@ -41,7 +49,7 @@ if(isset($_SESSION['username']))
 			$msg = "Failed to upload image";
 		}
 	}
-	
+	}
   }
 echo '
   
@@ -105,8 +113,9 @@ echo '
 				 <label for="tags"> Tags:</label>
 				 <textarea rows="2" cols="50" id="tags" name="image_tags" placeholder="Add tags..."></textarea>
 				 <br>
-				 </div>
-				 <div>
+				 </div>';
+				  include('errors.php');
+				 echo'<div>
 				 <button class = "dropbtn" name="upload">Submit</button>
 				 </div>
 			  </form>
