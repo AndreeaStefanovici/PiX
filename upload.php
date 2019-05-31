@@ -55,37 +55,7 @@ echo '
 	<link rel="stylesheet" type="text/css" href="upload.css">
 	<link rel="icon" href="imagini/logo.jpg">
 	<title>PiX</title>
-	<style type="text/css">
-   #content{
-   	width: 50%;
-   	margin: 20px auto;
-   	border: 1px solid #cbcbcb;
-   }
-   form{
-   	width: 50%;
-   	margin: 20px auto;
-   }
-   form div{
-   	margin-top: 5px;
-   }
-   #img_div{
-   	width: 80%;
-   	padding: 5px;
-   	margin: 15px auto;
-   	border: 1px solid #cbcbcb;
-   }
-   #img_div:after{
-   	content: "";
-   	display: block;
-   	clear: both;
-   }
-   img{
-   	float: left;
-   	margin: 5px;
-   	width: 300px;
-   	height: 140px;
-   }
-</style>
+	
 </head>
 
 <body>
@@ -100,7 +70,7 @@ echo '
         <div class="menu">
 		<ul class="clearfix">
 		    
-			<li><a href="login.html"> LogOut</a><br></li>
+			<li><a href="login.php"> LogOut</a><br></li>
 			<li> Upload<br></li>
 			<li><a href="index.php"> Home</a><br></li>
 			<li><a href="gallery.php"> Gallery</a><br></li>
@@ -119,23 +89,21 @@ echo '
 		<p> Select a file to upload :</p>
 		
 		<div class = "formUpload">
-	
-		   
   
 		      <form  method="POST" action="upload.php" enctype="multipart/form-data"> 
 			     <input type="hidden" name="size" value="1000000">
 						<div>
-						<input  type="file" name="image[]" multiple />
+						<input type="file" name="image[]" multiple />
                       
 						</div>
 			     <div>			
 				 <br>
-				 <p> Description:</p>
-				 <textarea rows="4" cols="50" id="box" name="image_text" placeholder="Say something about this image..."></textarea>
-				 <p> Title:</p>
-				 <textarea rows="1" cols="50" id="box" name="image_title" placeholder="Add title..."></textarea>
-				 <p> Tags:</p>
-				 <textarea rows="2" cols="50" id="box" name="image_tags" placeholder="Add tags..."></textarea>
+				 <label for="descriere"> Description:</label>
+				 <textarea rows="4" cols="50" id="descriere" name="image_text" placeholder="Say something about this image..."></textarea>
+				 <label for="titlu"> Title:</label>
+				 <textarea rows="1" cols="50" id="titlu" name="image_title" placeholder="Add title..."></textarea>
+				 <label for="tags"> Tags:</label>
+				 <textarea rows="2" cols="50" id="tags" name="image_tags" placeholder="Add tags..."></textarea>
 				 <br>
 				 </div>
 				 <div>

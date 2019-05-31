@@ -15,11 +15,15 @@ header {
     background-position: 0% 0%;
     color: white;
 }
-
- div img{
-    width: 40%;
-	height: 40%;
-	object-fit: cover;
+.image{
+       width: 500px;
+    height: 450px;
+	/*object-fit: cover;*/
+}
+.image-home{
+	width: 650px;
+    height: 450px;
+	padding: 35px;
 }
 
 .dropdown-content {
@@ -47,7 +51,6 @@ header {
 
 
 }
-
 .clearfix li {
     display: inline;
     padding-top: 0px;
@@ -86,6 +89,10 @@ footer {
     text-align: center;
     padding: 10px;
 }
+
+
+
+
 
 .dropbtn {
     background-color: black;
@@ -131,10 +138,18 @@ footer {
     display: inline-block;
 }
 
-.dropup-content { 
+.dropup-content{ 
     display: none;
     position: absolute;
-    bottom: 50px;
+    bottom: 40px;
+    background-color: #f1f1f1;
+    min-width: 100px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+}
+.dropup-content-edit-info { 
+    display: none;
+    position: absolute;
+    bottom: 40px;
     background-color: #f1f1f1;
     min-width: 100px;
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
@@ -147,13 +162,32 @@ footer {
     text-decoration: none;
     display: block;
     border-radius: 6px;
+	width: 91px;
+}
+
+.dropup-content-edit-info .edit-info{
+	background-color: #000;
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    border-radius: 6px;
+	width: 141px;
+	border:0px;
 }
 
 .dropup-content a:hover {
     background: rgba(0, 0, 0, 0.5);
 }
+.dropup-content-edit-info .edit-info:hover {
+    background: rgba(0, 0, 0, 0.5);
+}
+
 
 .dropup:hover .dropup-content {
+    display: block;
+}
+.dropup:hover .dropup-content-edit-info {
     display: block;
 }
 
@@ -173,7 +207,7 @@ footer {
     display: inline-block;
 }
 
-p{
+p, h3{
     text-align: center;
     text-indent: 50px;
     letter-spacing: 0.3px;
@@ -191,4 +225,64 @@ p{
 
 .footer li a{
     color:white;
+}
+form{
+	display:inline;
+}
+
+
+
+/*popup*/
+.overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.7);
+  transition: opacity 500ms;
+  visibility: hidden;
+  opacity: 0;
+}
+.overlay:target {
+  visibility: visible;
+  opacity: 1;
+}
+
+.popup {
+  margin: 70px auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 5px;
+  width: 30%;
+  position: relative;
+  transition: all 5s ease-in-out;
+}
+
+.popup .close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  transition: all 200ms;
+  font-size: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #333;
+}
+.popup .close:hover {
+  color: #06D85F;
+}
+
+.popup .content {
+  max-height: 30%;
+  overflow: auto;
+}
+
+@media screen and (max-width: 700px){
+  .box{
+    width: 70%;
+  }
+  .popup{
+    width: 70%;
+  }
 }

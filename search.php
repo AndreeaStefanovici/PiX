@@ -50,10 +50,28 @@
 		</div>
 		</form>
 		<div id="photo-gallery">';
+		$usr = $_SESSION['username'];
+		
+		if(isset($_POST['searchBtn'])) {
+		$search = $_POST['search'];
+		}
+		switch($_POST['filter']) {
+                    case 'title':
+						$s = 'title';
+                        $result = mysqli_query($db, "SELECT image, image_text , image_title , image_tags FROM images join users on images.galleryID = users.userID where username='$usr' and image_title like '%$search%'");
+                        break;
+                    case 'tag':
+					$s = 'tag';
+                        $result = mysqli_query($db, "SELECT image, image_text , image_title , image_tags FROM images join users on images.galleryID = users.userID where username='$usr' and image_tags like '%$search%'");
+                        break;
+                    default:
+                        break;
+                }
 				
-				//echo "<p>".$_SESSION['username']."</p>";
-				$usr = $_SESSION['username'];
-				$result = mysqli_query($db, "SELECT image, image_text , image_title , image_tags FROM images join users on images.galleryID = users.userID where username='$usr'");
+				if (mysqli_num_rows($result) == 0) { 
+					//results are empty, do something here 
+					echo "<p>Sorry! &#128532 There were no results for this $s. Try again! &#128030</p>";
+				} else { 
 				while ($row = mysqli_fetch_array($result)) {
 		echo ' <div class="gallery">';
 				$image = $row['image'];
@@ -61,8 +79,8 @@
 				$id=mysqli_fetch_array($request_id);
 				$id = $id['id'];
 				//echo $id;
-				echo'<a '; echo"href='photo.php?photoId=".$id."'>";
-				echo"<img src='imagini_upload/".$row['image']."' ";/* echo'width="600" height="400">';*/
+				echo'<a target="_blank"'; echo"href='photo.php?photoId=".$id."'>";
+				echo"<img src='imagini_upload/".$row['image']."' "; echo'width="600" height="400">';
 				echo "</a>";
 			echo'<div >';
 				//echo '<div class="desc">'.$row['image_text']."</div>";
@@ -70,7 +88,7 @@
 				echo '<div class="desc"></div>';
 				echo '<div class="desc">'.$row['image_tags']."</div>";
 		echo'</div></div>';
-}
+				}}
 echo '</div>';
 echo'</body>
 

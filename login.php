@@ -37,16 +37,16 @@
         <div class = "form_wrapper">
             <div class = "username_and_input">
                 <div class = "username">
-                    <label>Username</label>
+                    <label for="user">Username</label>
                 </div>
-                <input class = "input_fields" type = "text"  name="username" >
+                <input id="user" class = "input_fields" type = "text"  name="username" autocomplete="off">
             </div>
 
             <div class = "password_and_input">
                 <div class = "password">
-                    <label>Password</label>
+                    <label for="pass">Password</label>
                 </div>
-                <input class = "input_fields" type="password" name="password">
+                <input id="pass" class = "input_fields" type="password" name="password" autocomplete="off">
             </div>
         </div>
 		
@@ -68,10 +68,6 @@
 			</form>
 	    </div>		
 		
-        <div class = "cancel_container">
-            
-            <a href="login.html" class = "forgot_password">Forgot password? </a>
-        </div>
    </div>
   
  
