@@ -1,0 +1,135 @@
+html {
+    background-image: url(imagini/background.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+	font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+body{
+    margin-bottom:20px;
+}
+
+header {
+    text-align: center;   
+    color: white;
+}
+
+/*spatiul de deasupra meniului*/
+.space {
+    height: 200px;
+}
+
+/*bara meniu*/
+.clearfix {
+    
+    background-color: rgba(0, 0, 0, 0.5);
+    margin: 0;
+    padding: 10px ;
+    overflow: hidden;
+}
+
+.clearfix li {
+	display: inline;
+    padding-right: 30px;
+    padding-left: 30px;
+	float: right;
+}
+
+.clearfix li a {
+    float:right;
+    text-decoration: none;
+    color: white;
+}
+
+/*coloreaza butonul cand dai cu mouse-ul peste el*/
+.clearfix li a:hover {
+    color: #afafaf;
+}
+
+/*buton choose*/
+
+input[type="file"] {
+    display: none;  
+}
+
+.label_upload {
+	background-color: #000;
+    color: white;
+    padding: 5px;
+    text-decoration: none;
+    display: block;
+    border-radius: 4px;
+	width:100px;
+    text-align: center;
+}
+
+/*
+size  window
+*/
+
+.body_wrapper{
+	padding-left: 50px;
+	padding-right:50px;
+	padding-bottom: 50px;
+    width: 28%;
+    margin-left: 30%;
+    margin-right: 25%;
+    background-color: white;
+}
+
+/*
+Containers design
+*/
+
+.little_icon_container{
+    height: fit-content;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    margin-left: 15px;
+}
+
+.icon{
+    width:100px;
+    margin-top: 15px;
+}
+
+/*
+buton upload 
+*/
+
+.dropbtn {
+    background-color: black;
+    border: none;
+    color: white;
+    padding: 5px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 6px;
+    margin: 1.5px;
+    cursor: pointer;
+}
+
+.formUpload {
+	width: 50%;
+}
+
+textarea{
+	width:420px;
+}	
+
+/* Pentru Responsive, Ipad, Ipad Pro */
+@media (max-width: 1100px){
+    textarea{
+		width:230px;
+}
+}
+
+/* Pentru Galaxy S5, Pixel 2, Pixel 2XL*/
+@media (max-width: 450px){
+
+   textarea{
+		width:100px;
+}
+}

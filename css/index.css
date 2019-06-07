@@ -1,0 +1,107 @@
+html {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background: black;   
+}
+
+body {
+    background: white;
+    line-height: 25px;
+}
+
+header {
+    text-align: center;
+    background: url(imagini/background.jpg);
+    background-size: cover;
+    color: white;
+}
+
+.space {
+    height: 200px;
+}
+/*bara meniu*/
+.clearfix {
+    
+    background-color: rgba(0, 0, 0, 0.5);
+    margin: 0;
+    padding: 10px;
+    overflow: hidden;
+}
+
+.clearfix li {
+    display: inline;
+    padding-right: 30px;
+    padding-left: 30px;
+	float: right;
+}
+
+.clearfix li a {
+    float:right;
+    text-decoration: none;
+    color: white;
+}
+
+.clearfix li a:hover {
+    color: #afafaf;
+}
+
+article {
+    text-align: center;
+    background: white;
+    background-size: cover;
+    background-position: 0 60%;
+    padding-right: 20px;
+    padding-bottom: 16px;
+}
+
+h1 {
+    font-size: 2.5em;
+}
+
+footer {
+    background: black;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+.footer li {
+    display: inline;
+    text-decoration: none;
+    text-align: center;
+    color:white; 
+    word-spacing: 2.5px;
+}
+
+.footer li a{
+    color:white;
+}
+
+p, h3{
+    text-align: center;
+    text-indent: 50px;
+    letter-spacing: 0.3px;
+    line-height: 0.8;
+    font-style: italic;
+}
+
+.image-home{
+	width: 650px;
+    height: 450px;
+	padding: 35px;
+}
+
+/* Pentru Responsive, Ipad, Ipad Pro */
+@media (max-width: 1100px){
+    .image-home{
+		width: 650px;
+		height: 450px;
+	}
+}
+
+/* Pentru Galaxy S5, Pixel 2, Pixel 2XL*/
+@media (max-width: 450px){
+	.image-home{
+		width: 240px;
+		height: 150px;
+	}
+}
