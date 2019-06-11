@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  	<meta charset='UTF-8'/>
+	<title>Raport</title>
+	<link rel='stylesheet' href='raport.css'/>
+</head>
+<body>
+	<article>
+		<h1 aria-level="12">PiX</h1>
+		<div id="contentinfo">
+			<section typeof="sa:AuthorsList" id="authors">
+				<h4>Autori:</h4>
+				<ul>
+					<li typeof="sa:ContributorRole" property="schema:author">
+						<span typeof="schema:Person">
+        					<span property="schema:name">Corduneanu Ioana</span>
+						</span>
+						<ul>
+        					<li property="schema:roleContactPoint" typeof="schema:ContactPoint">
+          						<a href="mailto:cezara.ungureanu@info.uaic.ro" property="schema:email">corduneanu.ioana97@yahoo.ro</a>
+        					</li>
+      					</ul>
+					</li>
+					<li typeof="sa:ContributorRole" property="schema:author">
+						<span typeof="schema:Person">
+        					<span property="schema:name">Stefanovici Andreea</span>
+						</span>
+						<ul>
+        					<li property="schema:roleContactPoint" typeof="schema:ContactPoint">
+          						<a href="mailto:diana.stefanovici@info.uaic.ro" property="schema:email">diana.stefanovici@info.uaic.ro</a>
+        					</li>
+      					</ul>
+      				</li>
+				</ul>
+			</section>
+			<section property="schema:infoiasi">
+				<h6>Continut:</h6>
+				<ol>
+					<li>Descrierea proiectului</li>
+					<li>Utilizatorul</li>
+					<li>Module principale</li>
+					<li>Detalii de implementare</li>
+					<li>Use cases</li>
+					<li>Modelarea datelor</li>
+					<li>Bibliografie</li>
+				</ol>
+			</section>
+			<section typeof="schema:project" property="schema:web">
+				<h6>Descrierea proiectului:</h6>
+				<p>Proiectul presupune realizarea unei aplicații Web care permite utilizatorilor managementul imaginilor (fotografii, ilustrații) proprii pe baza unui cont creat în prealabil. Sistemul va pune la dispoziție functionalitățile de plasare a unui grup de imagini (upload), vizualizarea acestora cu posibilitatea salvării pe calculatorul local (download),ștergere, grupare pe baza unor criterii (data realizării fotografiei, conform unor tag-uri asociate, folosind informațiile EXIF ), căutare și vizualizare a diverselor rezoluții ale imaginilor printr-o interfață intuitivă.
+				Aplicația va permite adăugarea unor informații suplimentare pentru fiecare imagine încărcată: titlu, descriere, tag-uri etc. De asemenea, utilizatorii vor avea posibilitatea de a converti imaginile în minim 2 formate alternative și de a le edita: redimensionare, rotire, aplicare de filtre simple.
+				</p>
+			</section>
+			<section>
+				<h6>Utilizatorul:</h6>
+				<p> Aplicația PiX se deschide cu pagina principala ce oferă posibilitatea de logare, sau de creare a unui cont prin accesarea butonului “register”. 
+                  Exista două tipuri de utilizator:  </p>
+                              <p>-guest</p>
+                              <p>-utilizator înregistrat</p>
+							  <p>1) Guest: acest tip de utilizator poate accesa doar pagina de login și/sau înregistrare. Dacă acesta nu dorește să își creeze un cont nu poate accesa alte pagini ale aplicației.</p>
+							  <p>2) Utilizator înregistrat: acest tip de utilizator are deja creat un cont și trebuie doar să se logheze pentru a putea utiliza aplicația.Poate adauga imagini in galerie, le poate sterge, edita si salva pe propriu calculator.</p>
+			</section>
+			<section>
+				<h6>Module Principale:</h6>
+				<p>Website-ul are urmatoarele pagini:</p>
+					<ul>
+					<li>Paginile Login/Inregistrare:
+							  Aceste pagini sunt responsabile cu înregistrarea și autentificarea utilizatorilor. Aplicația se deschide cu pagina de login, iar dacă utilizatorul nu este înregisrat își poate crea un cont accesând pagina de înregistrare prin apăsarea butonului “register”.
+						</li>
+						<li>Pagina Home: 
+							    Este pagina de intampinare a aplicatiei.
+						</li>
+						<li>Pagina Gallery: 
+							Conține imagini din galeria utilizatorlui. Imagini care mai apoi pot fi prelucrate.
+						</li>
+						<li>Pagina Upload:
+							  Este destinată încărcarii unei imagini sau a unui grup de imagini. Utilizatorul poate să adauge o descriere, un titlu și tag-uri la poza încărcată și apoi să-i dea submit.
+						</li>
+						<li>Pagina Index:
+							  Conține imaginea pe care utilizatorul a selectat-o pentru modificare. Aici acesta poate edita poza (flip, aplicare de filtre) , informatiile acesteia (informatii despre titlu, descriere, tag-uri), o poate descarca in formatul dorit (png, jpg, jpeg) sau o poate sterge din galerie.
+						</li>
+					</ul>
+			</section>
+			<section>
+				<h6>Detalii de implementare:</h6>
+				<p>Aplicația PiX utilizează următoarele tehnologii:
+                      <ul>
+<li>					  Pentru partea de front-end aplicația utilizează:  </li>
+<ol>
+<li>	Html - pentru a reda conținutul paginii</li>
+<li>Css - pentru a da stil conținutului</li></ol>
+<li>	Pentru parte de back-end aplicația utilizează:</li>
+<ol><li>mySql - pentru baza de date care conține conturile utilizatorilor</li>
+<li>Php - pentru interacțiunea dintre front-end, baza de date ...</li>
+<li>JavaScript</li></ol>
+</ul>
+
+
+				</p>
+				
+			</section>
+			<section>
+				<h6>Use cases:</h6>
+				<ul>
+					<li>Dacă un utilizator vrea să se logheze și nu se găsește o potrivire între informațiile primite și ce se află în baza de date, aplicația va afișa un mesaj:  „ Combinație Username-Password incorectă”</li>
+					<li>Dacă un utilizator vrea să se înregistreze și dă informațiile în următoare le moduri:
+<ol><li> Nu completează toate câmpurile, aplicația va afișa un mesaj în acest sens: „ Toate câmpurile sunt obligatorii”.</li>
+
+<li> Cele 2 câmpuri destinate parolei nu corespund, aplicația va afișa un mesaj în acest sens: „Parolele nu corespund”.</li>
+</ol></li>
+<li>Dacă un utilizator cunoaște calea spre o pagina care este accesibila doar dupa login, aplicația nu-i va permite acest lucru, afișându-i un mesaj de eroare. „Trebuie să te loghezi pentru a accesa această pagină!”</li>
+<li>Dacă utilizatorul vrea să încarce o poză, dar nu a selectat toate campurile, aplicația va afișa un mesaj în acest sens.</li>
+<li>Dacă utilizatorul dorește să șteargă o fotografie, acest lucru este posibil doar dacă este adăugată de către utilizator („My Gallery”). </li>
+<li>Dacă utilizatorul dorește să editeze o fotografie acest lucru se poate realiza în pagina index a aplicației dupa selectarea acesteia. </li>
+
+
+
+				</ul>
+			</section>
+			<section>
+				<h6>Modelarea datelor:</h6>
+				<p>Această aplicație poate rula pe orice sistem de operare care are instalat un server Apache. Acest server ține aplicația online, totodată el are un sistem de management al unei baze de date și anume MySQL și un interpretor al codului pentru a afișa continuțul dinamic și anume, PHP.<br>
+Stocarea persistentă a datelor se realizează cu ajutorul unei baze de date care conține 2 tabele:
+<ol>
+<li>Tabelul Users: conține username-ul, parola, email-ul, ID-ul utilizatorului și ID-ul galeriei acestuia.</li>
+<li>Tabelul Images: conține ID-ul imaginii, ID-ul galeriei din care face parte, descriere, titlul si tag-urile fotografie, path-ul acesteia si dimensiunile.</li></ol>
+</p>
+				
+			</section>
+				
+			<section>
+				<h6>Bibliografie:</h6>
+					<ul>
+						<li>https://developer.mozilla.org/en-US/</li>
+						<li>http://www.rssboard.org/rss-specification</li>
+						<li>https://developer.mozilla.org/en-US/docs/Learn/HTML/Forms</li>
+						<li>https://javascript.info/</li>
+						<li>https://www.tutorialspoint.com/javascript/</li>
+					</ul>
+			</section>
+		</div>
+	</article>
+</body>
+</html>
